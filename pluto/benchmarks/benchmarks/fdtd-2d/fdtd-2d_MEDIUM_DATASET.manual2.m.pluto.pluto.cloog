@@ -1,0 +1,84 @@
+# CLooG script generated automatically by PLUTO 0.11.4-974-g4d4eb8a
+# language: C
+c
+
+0 2
+
+1
+
+
+# Number of statements
+4
+
+# S1 (ey[0][j] = _fict_[t];)
+5 4
+1 1 0 0 
+1 -1 0 99 
+1 0 1 0 
+1 0 -1 199 
+0 0 0 0 
+0 0 0
+
+# S2 (ey[i][j] = ey[i][j] - SCALAR_VAL(0.5)*(hz[i][j]-hz[i-1][j]);)
+6 5
+1 1 0 0 0 
+1 -1 0 0 99 
+1 0 1 0 -1 
+1 0 -1 0 299 
+1 0 0 1 0 
+1 0 0 -1 199 
+0 0 0
+
+# S3 (ex[i][j] = ex[i][j] - SCALAR_VAL(0.5)*(hz[i][j]-hz[i][j-1]);)
+6 5
+1 1 0 0 0 
+1 -1 0 0 99 
+1 0 1 0 0 
+1 0 -1 0 299 
+1 0 0 1 -1 
+1 0 0 -1 199 
+0 0 0
+
+# S4 (hz[i][j] = hz[i][j] - SCALAR_VAL(0.7)* (ex[i][j+1] - ex[i][j] + ey[i+1][j] - ey[i][j]);)
+6 5
+1 1 0 0 0 
+1 -1 0 0 99 
+1 0 1 0 0 
+1 0 -1 0 298 
+1 0 0 1 0 
+1 0 0 -1 198 
+0 0 0
+
+# we want cloog to set the iterator names
+0
+
+# Number of scattering functions
+4
+
+# T(S1)
+3 7
+0 1 0 0 -2 0 0 
+0 0 1 0 -1 0 0 
+0 0 0 1 -1 -1 0 
+
+# T(S2)
+3 8
+0 1 0 0 -2 -1 0 0 
+0 0 1 0 -1 -1 0 0 
+0 0 0 1 -1 0 -1 0 
+
+# T(S3)
+3 8
+0 1 0 0 -2 -1 0 0 
+0 0 1 0 -1 -1 0 0 
+0 0 0 1 -1 0 -1 0 
+
+# T(S4)
+3 8
+0 1 0 0 -2 -1 0 -1 
+0 0 1 0 -1 -1 0 -1 
+0 0 0 1 -1 0 -1 -1 
+
+# we will set the scattering dimension names
+3
+t1 t2 t3 
