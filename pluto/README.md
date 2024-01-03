@@ -40,16 +40,16 @@ Optionally, the following variables can be changed:
 
 ## Running Pluto
 
-To run Pluto, simply execute the script `run_node.sh`:
+To run Pluto, simply execute the script `run_pluto.sh`:
 
 ```bash
-./run_node.sh
+./run_pluto.sh
 ```
 
-To run Pluto on the cluster (Jubail), submit the job `run_node.sh`:
+To run Pluto on the cluster (Jubail), submit the job `run_pluto.sh`:
 
 ```bash
-sbatch run_node.sh
+sbatch run_pluto.sh
 ```
 
 ## Executing the original benchmarks without transformations along with the transformed benchmarks 
@@ -57,13 +57,13 @@ sbatch run_node.sh
 To execute the benchmarks without transformations, simply pass the argument `1` to the script:
 
 ```bash
-./run_node.sh 1
+./run_pluto.sh 1
 ```
 
 Or schedule the job with the argument `1`:
 
 ```bash
-sbatch run_node.sh 1
+sbatch run_pluto.sh 1
 ```
 
 
